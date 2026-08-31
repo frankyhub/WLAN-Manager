@@ -16,7 +16,10 @@
 
 
 ## Story
-Das Repo beinhaltet drei Programme für einen WLAN Manager. Das Programm "WLAN-Manager.ino" aktiviert einen WLAN-Manager ohne weitere Funktion. Das Programm eignet sich ideal für die Ergänzung eigenen Codes. Das Programm "WLAN-Manager_rmit_WEB-Server.ino" beinhaltet zusätzlich einen WEB-Server als Beispiel. Mit dem Programm wird die interne LED mit GPIO 2 ein/ausgeschaltet.
+Das Repo beinhaltet drei Programme für einen WLAN Manager. Das Programm "WLAN-Manager.ino" aktiviert einen WLAN-Manager ohne weitere Funktion. Das Programm eignet sich ideal für die Ergänzung eines eigenen Codes. 
+
+Das Programm "WLAN-Manager_mit_WEB-Server.ino" beinhaltet zusätzlich einen WEB-Server als Beispiel. Mit dem Programm wird die interne LED mit GPIO 2 ein/ausgeschaltet.
+
 Mit dem Programm "SPIFFS_formatieren.ino" wird das ESP32 Filesystem formatiert und die WLAN-Zugangsdaten gelöscht.
 
 ## In den WLAN Einstellungen den Access Point wählen 
