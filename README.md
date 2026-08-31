@@ -42,6 +42,8 @@ Mit dem Programm "SPIFFS_formatieren.ino" wird das ESP32 Filesystem formatiert u
 
 ![Bild](/pic/webserver.png)
 
+![Bild](/pic/webserver2.png)
+
 ## Die WLAN Daten können mit dem Programm "SPIFFS_formatieren.ino" gelöscht werden
 
 ![Bild](/pic/format.png)
