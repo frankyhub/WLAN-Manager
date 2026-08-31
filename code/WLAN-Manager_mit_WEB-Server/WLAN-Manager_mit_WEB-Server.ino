@@ -129,9 +129,9 @@ void loop(){
             client.println("<p>GPIO 2 interne LED - Status: " + output2State + "</p>");
             // Wenn der output2State aus ist, zeigt er den EIN-Button an       
             if (output2State=="aus") {
-              client.println("<p><a href=\"/2/ein\"><button class=\"button\">EIN</button></a></p>");
+              client.println("<p><a href=\"/2/ein\"><button class=\"button\">Schalte EIN</button></a></p>");
             } else {
-              client.println("<p><a href=\"/2/aus\"><button class=\"button button2\">AUS</button></a></p>");
+              client.println("<p><a href=\"/2/aus\"><button class=\"button button2\">Schalte AUS</button></a></p>");
             } 
 
             // Die HTTP-Antwort endet mit einer weiteren Leerzeile
