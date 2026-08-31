@@ -10,8 +10,7 @@ Board: ESP32vn IoT UNO V1.0.6
 **************************************************************************************************
 Libraries:
 WiFiManager (von tzapu) https://github.com/tzapu/wifimanager
-TM1637Display (von avishorp)
-FS und SPIFFS (standardmäßig in ESP32 Core enthalten)
+SPIFFS
 **************************************************************************************************
 C++ Arduino IDE V1.8.19
 
