@@ -25,8 +25,8 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 #include <FS.h>
 #include <SPIFFS.h>
 
-const char* ssid     = "ESP32-Access-Point";
-const char* password = "";
+const char* ssid     = "ESP32-Access-Point"; //SSID
+const char* password = ""; //kein Passwort
 
 WiFiServer server(80);
 
@@ -35,10 +35,8 @@ String header;
 String output2State = "aus";
 String output27State = "aus";
 
-// GPIO pins
+// GPIO pin
 const int output2 = 2;
-const int output27 = 27;
-
 
 void initSPIFFS() {
   if (!SPIFFS.begin(true)) {
@@ -71,11 +69,7 @@ void setup() {
   connectWiFi();
 
   pinMode(output2, OUTPUT);
-  pinMode(output27, OUTPUT);
-
   digitalWrite(output2, LOW);
-  digitalWrite(output27, LOW);
-
 
   Serial.print("Setze Access Point…");
 
@@ -107,7 +101,7 @@ void loop(){
             client.println("Connection: close");
             client.println();
             
-            // schaltet die GPIOs ein und aus
+            // schaltet den GPIO ein und aus
             if (header.indexOf("GET /2/ein") >= 0) {
               Serial.println("GPIO 2 an");
               output2State = "ein";
@@ -116,15 +110,7 @@ void loop(){
               Serial.println("GPIO 2 aus");
               output2State = "aus";
               digitalWrite(output2, LOW);
-            } else if (header.indexOf("GET /27/ein") >= 0) {
-              Serial.println("GPIO 27 an");
-              output27State = "ein";
-              digitalWrite(output27, HIGH);
-            } else if (header.indexOf("GET /27/aus") >= 0) {
-              Serial.println("GPIO 27 aus");
-              output27State = "aus";
-              digitalWrite(output27, LOW);
-            }
+                        }
             
             // Die HTML-Webseite anzeigen
             client.println("<!DOCTYPE html><html>");
@@ -148,17 +134,7 @@ void loop(){
             } else {
               client.println("<p><a href=\"/2/aus\"><button class=\"button button2\">AUS</button></a></p>");
             } 
-            /*   
-            // Aktuellen Zustand anzeigen und AN/AUS-Tasten für GPIO 27 
-            client.println("<p>GPIO 27 - State " + output27State + "</p>");
-            // If the output27State is aus, it displays the ein button       
-            if (output27State=="aus") {
-              client.println("<p><a href=\"/27/ein\"><button class=\"button\">ein</button></a></p>");
-            } else {
-              client.println("<p><a href=\"/27/aus\"><button class=\"button button2\">aus</button></a></p>");
-            }
-            client.println("</body></html>");
-            */
+
             // Die HTTP-Antwort endet mit einer weiteren Leerzeile
             client.println();
             // While-Schleife ausbrechen
