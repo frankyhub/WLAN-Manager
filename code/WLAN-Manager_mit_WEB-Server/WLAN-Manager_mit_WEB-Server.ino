@@ -33,7 +33,6 @@ WiFiServer server(80);
 String header;
 
 String output2State = "aus";
-String output27State = "aus";
 
 // GPIO pin
 const int output2 = 2;
