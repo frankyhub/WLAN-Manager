@@ -39,7 +39,7 @@ void initSPIFFS() {
 void connectWiFi() {
   WiFiManager wm;
 
-  if (!wm.autoConnect("AccesPoint")) {
+  if (!wm.autoConnect("AccessPoint")) {
     Serial.println("Keine Verbindung möglich, starte neu...");
     delay(3000);
     ESP.restart();
