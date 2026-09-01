@@ -17,6 +17,7 @@
 
 ## Story
 Das Repo beinhaltet drei Programme für einen WLAN Manager. Das Programm "WLAN-Manager.ino" aktiviert einen WLAN-Manager ohne weitere Funktion. Das Programm eignet sich ideal für die Ergänzung mit eigenen Code.
+Doe WLAN-Daten SSID und Passwort werden im SPIFFS (Serial Peripheral Interface Flash File System) gespeichert, d.h. sie stehen auch nach einem Spannungsausfall zur Verfügung und müssen nicht erneut eingegeben werden.
 
 Das Programm "WLAN-Manager_mit_WEB-Server.ino" beinhaltet zusätzlich einen WEB-Server als Beispiel. Mit dem Programm wird die interne LED mit GPIO 2 ein/ausgeschaltet.
 
