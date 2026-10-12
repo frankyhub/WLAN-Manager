@@ -22,35 +22,35 @@ Mit dem Programm "SPIFFS_formatieren.ino" wird das ESP32 Filesystem formatiert u
 ## In den WLAN Einstellungen den Access Point wählen 
 
 <img src="pic/0wlan.png" width="500"> 
-<br> <br
+<br> <br>
 
 ## und im Browser die Adresse 192.168.4.1 starten 
 
 <img src="pic/1WiFiManager.png" width="500"> 
-<br> <br
+<br> <br>
 
 ## anschließend die WLAN Daten SSID und Password eingeben
 
 <img src="pic/2captivewlan.png" width="500"> 
-<br> <br
+<br> <br>
 
 ## Sind die WLAN Daten korrekt, wir im seriellen Monitor die IP des WEB-Servers angezeigt
 
 <img src="pic/seriel.png" width="500"> 
-<br> <br
+<br> <br>
 
 ## Jetzt kann der WEB-Servers mit der angezeigten IP gestartet werden
 
 <img src="pic/webserver.png" width="500"> 
-<br> <br
+<br> <br>
 
 <img src="pic/webserver2.png" width="500"> 
-<br> <br
+<br> <br>
 
 ## Die WLAN Daten können mit dem Programm "SPIFFS_formatieren.ino" gelöscht werden
 
 <img src="pic/format.png" width="500"> 
-<br> <br
+<br> <br>
 
 ---
 
